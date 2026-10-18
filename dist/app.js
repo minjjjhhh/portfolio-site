@@ -7,7 +7,7 @@ const services=[['Branding & Visual Identity',['브랜딩','브랜드 전략','�
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const graphemes=s=>typeof Intl.Segmenter==='function'?[...new Intl.Segmenter('ko',{granularity:'grapheme'}).segment(s)].map(s=>s.segment):Array.from(s);
 const projects = [
-  {slug:'mova',name:'MOVA',landingName:'MOBA',year:'2026',field:'브랜드 디자인 · 웹 디자인',description:'패션 브랜드 아이덴티티 및 웹·모바일 디자인',workDescription:'브래드기획 ∙ UI/UX디자인',tools:'Figma · AI 이미지 생성 도구',landingImage:'mova-landing.png',workImage:'mova-work.png',categories:['Branding','UI/UX Design','Website Design']},
+  {slug:'mova',name:'MOVA',year:'2026',field:'브랜드 디자인 · 웹 디자인',description:'패션 브랜드 아이덴티티 및 웹·모바일 디자인',workDescription:'브래드기획 ∙ UI/UX디자인',tools:'Figma · AI 이미지 생성 도구',landingImage:'mova-landing.png',workImage:'mova-work.png',categories:['Branding','UI/UX Design','Website Design']},
   {slug:'movera',name:'MOVERA',year:'2026',field:'BX 디자인 · UX 리서치',description:'SPA 패션 브랜드 기획 및 랜딩페이지 콘셉트',workDescription:'브랜드 기획',tools:'Figma · AI',landingImage:'movera-landing.png',workImage:'movera-work.png',categories:['Branding','Strategy & Research']},
   {slug:'project-3',name:'프로젝트3',year:'2026',field:'디자인분야',description:'프로젝트 유형',tools:'사용툴',categories:[],pending:true},
   {slug:'project-4',name:'프로젝트4',year:'2026',field:'디자인분야',description:'프로젝트 유형',tools:'사용툴',categories:[],pending:true}
@@ -61,7 +61,7 @@ function detailMeta(items) {return `<dl class="detail-meta reveal">${items.map((
 function caseNavigation(other) {return `<nav class="case-navigation section reveal" aria-label="다른 프로젝트 탐색"><a class="roll" href="#/work">← All Projects</a><a class="roll" href="#/work/${other.toLowerCase()}">Next / ${other} ↗</a></nav>`;}
 
 function mova() {
-  return `<article class="case-study mova"><section class="section"><h1 class="work-title reveal">MOVA</h1><p class="work-description reveal">일상에 자연스럽게 스며드는 패션 브랜드 ‘ MOBA ’의 아이덴티티를 기획하고,<br>로고·패턴부터 상품 목업과 웹·모바일 화면까지 확장한 프로젝트</p>${detailMeta([['Project Type','Branding<br>· Web Design'],['Role','브랜드 기획 · 네이밍 · 로고<br>· 웹 디자인'],['Duration','7-10일'],['Year','2026년']])}<div class="reveal">${media('PROJECT HERO IMAGE','detail-hero')}</div></section>
+  return `<article class="case-study mova"><section class="section"><h1 class="work-title reveal">MOVA</h1><p class="work-description reveal">일상에 자연스럽게 스며드는 패션 브랜드 ‘ MOVA ’의 아이덴티티를 기획하고,<br>로고·패턴부터 상품 목업과 웹·모바일 화면까지 확장한 프로젝트</p>${detailMeta([['Project Type','Branding<br>· Web Design'],['Role','브랜드 기획 · 네이밍 · 로고<br>· 웹 디자인'],['Duration','7-10일'],['Year','2026년']])}<div class="reveal">${media('PROJECT HERO IMAGE','detail-hero')}</div></section>
     <section class="section"><h2 class="reveal">01 / The problem</h2><p class="detail-body read-text">프로젝트에서 해결하고자 한 문제는 무엇인가요?</p><p class="reveal muted">문제 상황과 리서치 결과, 핵심 인사이트를 소개하는 영역입니다.</p><div class="reveal">${media('문제와 기존 경험을 보여주는 프로젝트 이미지','detail-image')}</div></section>
     <section class="section"><h2 class="reveal">02 / The solution</h2><p class="detail-body read-text">문제를 해결하기 위해 어떤 방향을 선택했나요?</p><p class="reveal muted">전략과 디자인 결과물, 주요 시각 자료를 배치합니다.</p><div class="detail-pair"><div class="reveal">${media('SOLUTION VISUAL 01')}</div><div class="reveal">${media('SOLUTION VISUAL 02')}</div></div><div class="reveal">${media('PROJECT GALLERY / FULL WIDTH','detail-image')}</div></section></article>${caseNavigation('MOVERA')}${contact()}${footer()}`;
 }
