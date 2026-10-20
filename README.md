@@ -1,6 +1,6 @@
-# Day47 · Jihye Min Portfolio
+# Day48 · Jihye Min Portfolio
 
-수정한 Figma의 CO_Landing, CO_work, MOVA, MOVERA 화면을 구현한 정적 웹사이트입니다.
+Figma의 Day48_이미지자산얹기 페이지에 있는 day48_Landing, day48_work, day48_MOVA_Visual_Gallery, day48_Case Study_work_MOVERA를 구현한 정적 웹사이트입니다.
 
 ## 파일
 
@@ -37,3 +37,9 @@ Figma의 최신 Hero 및 Landing·Work 프로젝트 이미지를 적용했습니
 Landing → Work → 두 Case Work 이동, 카테고리 필터, 모바일 메뉴, 문의 필수값 검증, 로컬 이미지 로딩, Paperlogy 로딩, 콘솔 오류와 화면 넘침을 브라우저에서 확인했습니다. 원본 Framer 사이트와 모든 프레임 단위 타이밍의 100% 동일성을 보증하지 않습니다.
 
 About me의 제목과 본문은 Figma 색상(#6F6F6D / #B8B8B6)으로 고정하며, 해당 섹션에는 스크롤 글자 색상 변경을 적용하지 않습니다.
+
+## Day48 변경
+
+Landing에는 MOVA·MOVERA 2개 프로젝트를 표시하고, 두 카드 모두 Work로 이동합니다. Work에서는 각 프로젝트의 상세 화면으로 이동합니다. MOVA 상세는 원본 자산 27장, 브랜드 컬러, 무드 이미지, 로고·패턴·목업, 캠페인 산출물과 드래그 가능한 6장 슬라이드로 구성됩니다. `dist/gallery.js`와 `dist/day48.css`에 해당 구성과 반응형 스타일이 있습니다.
+
+슬라이드는 마우스 드래그, 터치의 가로 스크롤, 이전·다음 버튼, 방향키·Home·End를 지원합니다. 모바일은 갤러리를 한 열로 배치하고 이미지 프레임을 비율에 맞게 축소합니다. 320px와 390px 브라우저 프레임에서 메뉴, Landing → Work → 각 상세 이동, 필터, 슬라이드 이동, 문서의 가로 넘침과 이미지 로딩을 확인했습니다. 실제 휴대폰 기기에서의 검수는 별도입니다.
