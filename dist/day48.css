@@ -1,4 +1,5 @@
 /* Day48 responsive portfolio and MOVA visual gallery. */
+.gallery-lead,.gallery-heading h2,.mood-section .gallery-figure h3{word-break:keep-all;overflow-wrap:anywhere}
 @media(max-width:700px){.work-description,.gallery-lead{word-break:keep-all;overflow-wrap:anywhere}.work-description br,.gallery-lead br{display:none}}
 @media(max-width:380px){.movera>.section:first-child>.work-description{font-size:24px}}
 @media(max-width:700px){.filters button{width:140px;flex:0 0 140px}.project-card .marquee{display:none}}
